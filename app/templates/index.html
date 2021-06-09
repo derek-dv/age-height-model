@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Log reg</title>
+</head>
+<body>
+	<div class="main">
+		<center>
+			<img src="{{ href }}" alt="model" width=1200>
+			{% for inp in inps %}
+				<p>{{ inp }}</p>
+			{% endfor %}
+			<form method="POST">
+				<label for="inp">Enter your inputs <1 to 20> for predictions</label>
+				<input type="text" name="text1">
+				<input type="text" name="text2">
+				<input type="text" name="text3">
+				<button type="submit">Enter</button>
+			</form>
+		</center>
+	</div>
+</body>
+</html>
