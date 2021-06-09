@@ -25,8 +25,8 @@ pyasn1==0.4.8
 pyasn1-modules==0.2.8
 PyJWT==1.7.1
 pyreadline==2.1
-pytz==2021.1
-pywin32==227
+pytz
+pywin32
 pywinpty==0.5.7
 pyzmq==20.0.0
 QtPy==1.9.0
