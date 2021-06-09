@@ -40,9 +40,6 @@ six
 testpath
 threadpoolctl
 tornado
-traitlets @ file:///home/ktietz/src/ci/traitlets_1611929699868/work
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1611751222202/work
-urllib3 @ file:///tmp/build/80754af9/urllib3_1615837158687/work
 uuid==1.30
 webencodings==0.5.1
 Werkzeug==0.16.1
