@@ -9,7 +9,7 @@ cycler==0.10.0
 Flask
 gast==0.2.2
 grpcio
-gunnicorn==20.1.0
+gunicorn==20.1.0
 h5py==2.8.0
 jedi==0.17.0
 kaleido
