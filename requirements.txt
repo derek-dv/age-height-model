@@ -22,6 +22,7 @@ defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
 entrypoints==0.3
 Flask @ file:///home/ktietz/src/ci/flask_1611932660458/work
 gast==0.2.2
+gunicorn==20.1.0
 grpcio @ file:///C:/ci/grpcio_1614884419385/work
 h5py==2.8.0
 idna @ file:///home/linux1/recipes/ci/idna_1610986105248/work
