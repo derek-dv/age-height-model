@@ -15,3 +15,4 @@ plotly
 sklearn
 scipy
 numpy
+kaleido
