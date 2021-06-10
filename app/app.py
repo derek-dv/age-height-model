@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 def make_preds(model, inputs, out_file):
 	model = load(model)
-	data = pd.read_pickle('AgesAndHeights.pkl')
+	data = pd.read_pickle('app/AgesAndHeights.pkl')
 	ages = data['Age']
 	data = data[ages > 0]
 	ages = data['Age']
@@ -49,10 +49,10 @@ def hello_world():
 
 		else:
 			ran = uuid.uuid4().hex
-			out_file = f'static/pred-{ran}.svg'
+			out_file = f'app/static/pred-{ran}.svg'
 			inp1 = request.form['text1']
 			inp2 = request.form['text2']
 			inp3 = request.form['text3']
 			float_inps = [make_float(inp1), make_float(inp2), make_float(inp3)]
-			make_preds('model.joblib', float_inps, out_file)
+			make_preds('app/model.joblib', float_inps, out_file)
 			return render_template('index.html', href=out_file, inps=float_inps)
