@@ -27,7 +27,7 @@ def make_preds(model, inputs, out_file):
                                                                     'y': 'Heights'})
 	fig.add_trace(go.Scatter(x=dp.reshape(19), y=pred, mode='lines', name='Model'))
 	fig.add_trace(go.Scatter(x=inputs.reshape(lens), y=preds, mode='markers', name='Output', line=dict(color='purple', width=2)))
-	fig.write_image(out_file, width=800, engine='kaleido')
+	fig.write_image(out_file, width=1000, engine='kaleido')
 	print('done')
 	fig.show()
 	
@@ -49,10 +49,10 @@ def hello_world():
 
 		else:
 			ran = uuid.uuid4().hex
-			out_file = f'app/static/pred-{ran}.svg'
+			out_file = f'static/pred-{ran}.svg'
 			inp1 = request.form['text1']
 			inp2 = request.form['text2']
 			inp3 = request.form['text3']
 			float_inps = [make_float(inp1), make_float(inp2), make_float(inp3)]
-			make_preds('app/model.joblib', float_inps, out_file)
+			make_preds('app/model.joblib', float_inps, f'app/{out_file}')
 			return render_template('index.html', href=out_file, inps=float_inps)
